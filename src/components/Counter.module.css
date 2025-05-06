@@ -1,5 +1,5 @@
 .counterWrapper {
-  padding: 0 2rem 1rem;
+  padding: 2rem;
   border-radius: 8px;
   background-color: #090909;
 
@@ -8,11 +8,13 @@
 .counter {
   display: flex;
   align-items: center;
+  flex-direction: column;
   gap: 3rem;
 }
 
 .counterValue {
-  font-size: 8rem;
+  font-size: 8em;
+
 }
 
 .counterControls {

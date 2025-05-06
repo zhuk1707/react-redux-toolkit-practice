@@ -1,0 +1,44 @@
+.counterWrapper {
+  padding: 0 2rem 1rem;
+  border-radius: 8px;
+  background-color: #090909;
+
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.counterValue {
+  font-size: 8rem;
+}
+
+.counterControls {
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
+}
+
+.counterControlWrapper {
+  display: flex;
+  gap: .8rem;
+}
+
+.counterControlWrapper input {
+  border-radius: 8px;
+  border: 1px solid #242424;
+  padding: 0.6em 1.2em;
+  max-width: 6rem;
+}
+
+.counterControlWrapper button {
+  width: 100%;
+  padding: .4rem;
+  min-width: 6rem;
+}
+
+.actionCounter {
+  opacity: .65;
+}

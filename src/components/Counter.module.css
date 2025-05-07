@@ -32,15 +32,35 @@
   border-radius: 8px;
   border: 1px solid #242424;
   padding: 0.6em 1.2em;
-  max-width: 6rem;
+  width: 100%;
 }
 
-.counterControlWrapper button {
+.button {
   width: 100%;
   padding: .4rem;
-  min-width: 6rem;
+  min-width: 10rem;
 }
 
-.actionCounter {
-  opacity: .65;
+.asyncButton {
+  composes: button;
+  position: relative;
+}
+
+.asyncButton:after {
+  content: "";
+  background-color: rgba(255, 255, 255, 0.13);
+  /*display: block;*/
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transition: width 1s linear, opacity 0.5s ease 1s;
+}
+
+.asyncButton:active:after {
+  width: 0;
+  opacity: 1;
+  transition: 0s
 }

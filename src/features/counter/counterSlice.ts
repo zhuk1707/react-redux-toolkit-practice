@@ -20,8 +20,8 @@ const counterSlice = createSlice({
       state.value -= 1
     },
 
-    divisionByTwo: (state) => {
-      state.value = Math.round(state.value / 2)
+    reset: (state) => {
+      state.value = 0
     },
     incrementByAmount: (state, action: PayloadAction<number>) => {
       state.value += action.payload
@@ -30,6 +30,6 @@ const counterSlice = createSlice({
 })
 
 // Action creators are generated for each case reducer function
-export const {increment, decrement, incrementByAmount, divisionByTwo} = counterSlice.actions
+export const {increment, decrement, incrementByAmount, reset} = counterSlice.actions
 
 export default counterSlice.reducer

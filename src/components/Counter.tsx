@@ -2,7 +2,7 @@ import styles from "./Counter.module.css"
 import {useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import type {RootState} from "../store/store.ts";
-import {decrement, divisionByTwo, increment, incrementByAmount} from "../features/counter/counterSlice.ts";
+import {increment, decrement, reset, incrementByAmount} from "../features/counter/counterSlice.ts";
 
 export const Counter = () => {
   const count = useSelector((state: RootState) => state.counter.value)
@@ -21,19 +21,18 @@ export const Counter = () => {
             >
               Increment
             </button>
-          </div>
-          <div className={styles.counterControlWrapper}>
             <button
               onClick={() => dispatch(decrement())}
             >
               Decrement
             </button>
           </div>
+
           <div className={styles.counterControlWrapper}>
             <button
-              onClick={() => dispatch(divisionByTwo())}
+              onClick={() => dispatch(reset())}
             >
-              Division by 2
+              Reset
             </button>
           </div>
           <div className={styles.counterControlWrapper}>
